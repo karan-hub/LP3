@@ -14,9 +14,15 @@ public class NQuene {
 
 
      public static String[][] solveNQueens3(int n) {
-        String[][] board2 = new String[n][n];
-        Solution(0,board2);
-        return board2;
+        String[][] board = new String[n][n];
+         // Initialize board with "_"
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                board[i][j] = "_";
+            }
+        }
+        Solution(0,board);
+        return board;
     }
      
      
