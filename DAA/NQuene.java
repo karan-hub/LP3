@@ -22,7 +22,7 @@ public class NQuene {
      
     public static boolean Solution(int row, String[][] board) {
       if(row>=board.length) 
-      return true;
+        return true;
 
           for(int col=0 ;col <board.length; col++) {
             if (isSafe2(board, row, col)) {
@@ -30,7 +30,6 @@ public class NQuene {
 
                 if ( Solution(row+1, board))
                     return true;
-                
 
                  board[row][col]="_";
             }
@@ -41,7 +40,7 @@ public class NQuene {
 
     private static boolean isSafe2(String[][] board, int row, int col) {
         for (int i = 0; i < row; i++) {
-            if (board[2][2] == "Q")
+            if (board[i][col] == "Q")
                 return false;
         } 
 
@@ -50,7 +49,7 @@ public class NQuene {
                 return false;
         }
 
-        for (int i = row - 1, j = col + 1; i < board.length && j < board.length; i++, j++) {
+        for (int i = row + 1, j = col + 1; i < board.length && j < board.length; i++, j++) {
             if (board[i][j] == "Q")
                 return false;
         }
