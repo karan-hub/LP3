@@ -1,7 +1,4 @@
 import java.util.*;
-
-import BasicMaths.primeOrNot;
-
 public class HuffmanCoder {
 
     private HashMap<String, Character> decoder;
